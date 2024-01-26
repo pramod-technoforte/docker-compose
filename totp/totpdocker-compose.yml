@@ -1,0 +1,16 @@
+version: '3'
+services:
+  totp-binder-service:
+    image: pramod444/totp-binder-service:develop
+    container_name: totp-binder-service
+    environment:
+      user: root
+      ports:
+        - 9093:9093
+  totp-binder-ui:
+    image: pramod444/totp-binder-ui:develop-pramod
+    container_name: totp-binder-ui
+    environment:
+      user: root
+      ports:
+        - 9098:9098
